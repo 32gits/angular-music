@@ -11,8 +11,8 @@
         <div class="bpm-controls">
             <span id="bpm-text">{{ beatsPerMinute }}</span>
             <div class="flex-col">
-                <button id="bpm-up" type="button" class="bpm-btn" (click)="bpmBump(1)">+</button>
-                <button id="bpm-down" type="button" class="bpm-btn" (click)="bpmBump(-1)">-</button>
+                <a id="bpm-up" type="button" class="bpm-btn unselectable" (click)="bpmBump(1)">+</a>
+                <a id="bpm-down" type="button" class="bpm-btn unselectable" (click)="bpmBump(-1)">-</a>
             </div>
         </div>
         

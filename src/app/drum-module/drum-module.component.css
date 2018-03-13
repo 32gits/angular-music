@@ -90,6 +90,7 @@ h2 {
     border-bottom: 2px solid #8562ca;
 }
 .bpm-btn {
+    text-align: center;
     text-decoration: none;
     width: 50px;
     border: none;
@@ -103,6 +104,14 @@ h2 {
     border-bottom: 3px solid #232323;
     border-right: 3px solid #474747;
     border-left: 3px solid #332358;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .flex-col {
     display: flex;
