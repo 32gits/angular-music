@@ -9,4 +9,9 @@ export class AppComponent {
   title = 'app';
   googleChromeURL = 'https://www.google.com/chrome/';
   angularURL = 'https://angular.io/';
+
+  constructor() {
+  }
 }
+
+

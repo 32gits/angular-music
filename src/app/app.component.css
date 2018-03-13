@@ -64,9 +64,27 @@
 .smaller {
     font-size: 18px !important;
 }
+.dark {
+    color: #49425b !important;
+}
 #chrome-icon {
     max-width: 24px;
 }
 #only-works {
     margin: 0 5px 0 25px;
+}
+#learn-more {
+    margin: 0 5px 0 25px;
+}
+.angular {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+#angular-icon {
+    max-width: 28px;
+    margin-left: 4px;
+}
+#angular-icon:hover {
+    cursor: pointer;
 }
