@@ -61,8 +61,8 @@ export class DrumModuleComponent implements OnInit {
         this.playing = false;
 
         // Setup sources for HTML5 <audio> players
-        this.kickSource = this.ASSETPATH + '808kick.aif.mp3';
-        this.snareSource = this.ASSETPATH + 'acousticSnare.mp3';
+        this.kickSource = this.ASSETPATH + '808kick.wav';
+        this.snareSource = this.ASSETPATH + 'acousticSnare.wav';
         this.tomSource = this.ASSETPATH + 'electroTom.wav';
         this.hiHatSource = this.ASSETPATH + 'hiHatClosed.wav';
 
