@@ -1,0 +1,111 @@
+
+<div class="machine-body">
+    <div class="flex-between header-wrap">
+        <h2>Drum Machine</h2>
+        <div class="btn-wrapper">
+            <button id="start" *ngIf="!playing" class="btn-ctrl" type="button" (click)="startSequence()">START</button>
+            <button id="stop" *ngIf="playing" class="btn-ctrl" type="button" (click)="stopSequence()">STOP</button>
+        </div>
+    </div>
+    <div class="flex-between secondary-ctrls">
+        <div class="bpm-controls">
+            <span id="bpm-text">{{ beatsPerMinute }}</span>
+            <div class="flex-col">
+                <button id="bpm-up" type="button" class="bpm-btn" (click)="bpmBump(1)">+</button>
+                <button id="bpm-down" type="button" class="bpm-btn" (click)="bpmBump(-1)">-</button>
+            </div>
+        </div>
+        
+        <!-- KICK SNARE TOM HAT -->
+        <div class="section-buttons">
+            <a 
+                id="section1"
+                role="button"
+                type="button"
+                class="section-btn"
+                (click)="changeSection(1)"
+                [class.sec-active]="currentSection===1">
+                KICK
+             </a>
+            <a
+                id="section2"
+                role="button"
+                type="button"
+                class="section-btn"
+                (click)="changeSection(2)"
+                [class.sec-active]="currentSection===2">
+                SNARE
+            </a>
+            <a
+                id="section3"
+                role="button"
+                type="button"
+                class="section-btn"
+                (click)="changeSection(3)"
+                [class.sec-active]="currentSection===3">
+                TOM
+            </a>
+            <a
+                id="section4"
+                role="button"
+                type="button"
+                class="section-btn"
+                (click)="changeSection(4)"
+                [class.sec-active]="currentSection===4">
+                HAT
+            </a>
+        </div>
+    </div>
+    <!-- Buttons -->
+    <div class="container">
+        <ng-container *ngIf="currentSection===1">
+                <ng-container *ngFor="let btn of buttons1; let i = index;">
+                        <app-drum-button
+                            [isActive]="btn"
+                            [id]="i"
+                            [isPlaying]="i===currentButton"
+                            (toggleEvent)="onToggle($event)">
+                        </app-drum-button>
+                    </ng-container>
+        </ng-container>
+        <ng-container *ngIf="currentSection===2">
+                <ng-container *ngFor="let btn of buttons2; let i = index;">
+                        <app-drum-button
+                            [isActive]="btn"
+                            [id]="i"
+                            [isPlaying]="i===currentButton"
+                            (toggleEvent)="onToggle($event)">
+                        </app-drum-button>
+                    </ng-container>
+        </ng-container>
+        <ng-container *ngIf="currentSection===3">
+                <ng-container *ngFor="let btn of buttons3; let i = index;">
+                        <app-drum-button
+                            [isActive]="btn"
+                            [id]="i"
+                            [isPlaying]="i===currentButton"
+                            (toggleEvent)="onToggle($event)">
+                        </app-drum-button>
+                    </ng-container>
+        </ng-container>
+        <ng-container *ngIf="currentSection===4">
+                <ng-container *ngFor="let btn of buttons4; let i = index;">
+                    <app-drum-button
+                        [isActive]="btn"
+                        [id]="i"
+                        [isPlaying]="i===currentButton"
+                        (toggleEvent)="onToggle($event)">
+                    </app-drum-button>
+                </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+<audio #kickPlayer1 preload="auto"><source [src]="kickSource"></audio>
+<audio #kickPlayer2 preload="auto"><source [src]="kickSource"></audio>
+<audio #snarePlayer1 preload="auto"><source [src]="snareSource"></audio>
+<audio #snarePlayer2 preload="auto"><source [src]="snareSource"></audio>
+<audio #hiHatPlayer1 preload="auto"><source [src]="hiHatSource"></audio>
+<audio #hiHatPlayer2 preload="auto"><source [src]="hiHatSource"></audio>
+<audio #tomPlayer1 preload="auto"><source [src]="tomSource"></audio>
+<audio #tomPlayer2 preload="auto"><source [src]="tomSource"></audio>

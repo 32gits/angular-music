@@ -1,0 +1,156 @@
+.main-columns {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.machine-body {
+    background-color: #454545;
+    border-radius: 25px;
+    padding: 20px 40px 40px 40px;
+    display: inline-block;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.10), -20px 20px 10px rgba(0,0,0,0.1);
+}
+.container {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrap {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 2.5em;
+    color: #cdcdcd;
+    margin: 0;
+}
+.btn-ctrl {
+    text-decoration: none;
+    font-family: Roboto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: darkgray;
+    border: none;
+}
+#start {
+    min-width: 82px;
+    background: #e1f2da; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #e1f2da 0%, #c9edd1 35%, #90ee90 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #e1f2da 0%,#c9edd1 35%,#90ee90 100%); 
+    background: radial-gradient(ellipse at center, #e1f2da 0%,#c9edd1 35%,#90ee90 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2da', endColorstr='#90ee90',GradientType=1 );
+    box-shadow: -3px 3px 3px rgba(0,0,0,0.10), -3px 3px 3px rgba(0,0,0,0.1);
+    color: forestgreen;
+}
+#stop {
+    min-width: 82px;
+    background: #fcaeae;
+    background: -moz-radial-gradient(center, ellipse cover, #fcaeae 0%, #fc6f6f 56%, #ff1616 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #fcaeae 0%,#fc6f6f 56%,#ff1616 100%);
+    background: radial-gradient(ellipse at center, #fcaeae 0%,#fc6f6f 56%,#ff1616 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcaeae', endColorstr='#ff1616',GradientType=1 );
+    box-shadow: -3px 3px 3px rgba(0,0,0,0.10), -3px 3px 3px rgba(0,0,0,0.1);
+    color: rgb(182, 6, 41);
+}
+.secondary-ctrls {
+    margin-bottom: 20px;
+}
+.bpm-controls {
+    display: flex;
+}
+#bpm-text {
+    background-color: mediumpurple;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px 0 0 15px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Calculator";
+    color: rebeccapurple;
+    line-height: 1.5;
+    border-top: 3px solid #8562ca;
+    border-left: 2px solid #8562ca;
+    border-bottom: 2px solid #8562ca;
+}
+.bpm-btn {
+    text-decoration: none;
+    width: 50px;
+    border: none;
+    background-color: #343434;
+    height: 50%;
+    color: #cdcdcd;
+    font-weight: 400;
+    font-family: MONOSPACE;
+    font-size: 14px;
+    border-top: solid 2px #676767;
+    border-bottom: 3px solid #232323;
+    border-right: 3px solid #474747;
+    border-left: 3px solid #332358;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+#bpm-up {
+    border-radius: 0 15px 0 0;
+    padding-top: 2px;
+}
+#bpm-down {
+    border-radius: 0 0 15px 0;
+    padding-bottom: 2px;
+}
+.section-btn {
+    padding: 20px 0;
+    background-color: #343434;
+    color: #cdcdcd;
+    border-top: solid 2px #676767;
+    border-bottom: 3px solid #232323;
+    border-right: 3px solid #474747;
+    border-left: 3px solid #232323;
+    width: 65px;
+    font-family: Roboto;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+}
+.section-buttons {
+    display: flex;
+    box-shadow: -2px 3px 2px rgba(0,0,0,0.10), -2px 3px 2px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+#section1 {
+    border-radius: 15px 0 0 15px;
+}
+#section4 {
+    border-radius: 0 15px 15px 0;
+}
+.sec-active {
+    background-color: #232323;
+    color: #9a9a9a;
+}
+
+@font-face {
+    font-family: "Calculator";
+    src: url('../../assets/bpm_font.ttf') format("truetype");
+}
+
+a[role=button]:hover {
+    cursor: pointer;
+}
