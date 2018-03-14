@@ -79,7 +79,7 @@ export class DrumModuleComponent implements OnInit {
     }
 
     onToggle(buttonID: number): void {
-        switch(this.currentSection) {
+        switch (this.currentSection) {
             case 1:
                 this.buttons1[buttonID] = !this.buttons1[buttonID];
                 break;

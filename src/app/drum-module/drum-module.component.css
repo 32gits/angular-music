@@ -34,7 +34,7 @@
 }
 
 h2 {
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 2.5em;
     color: #cdcdcd;
@@ -42,7 +42,7 @@ h2 {
 }
 .btn-ctrl {
     text-decoration: none;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 14px;
@@ -98,7 +98,7 @@ h2 {
     height: 50%;
     color: #cdcdcd;
     font-weight: 400;
-    font-family: MONOSPACE;
+    font-family: MONOSPACE, 'Roboto', sans-serif;
     font-size: 14px;
     border-top: solid 2px #676767;
     border-bottom: 3px solid #232323;
