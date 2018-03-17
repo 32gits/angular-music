@@ -1,9 +1,14 @@
 <div class="flex-center main-content">
-    <div class="left-content"></div>
+    <div class="left-content">
+        <app-synth-module></app-synth-module>
+    </div>
     <app-drum-module></app-drum-module>
     <div class="right-content">
+        
         <p id="info-large" class="info-text">A simple 4-instrument drum sequencer.</p>
         <p class="info-text dark">Created with Angular by Chris Collins.</p>
+
+        <!-- Chrome Link -->
         <div class="chrome">
             <span id="only-works" class="info-text smaller dark">Only really works in</span>
             <a class="info-text smaller link" href="{{ googleChromeURL }}">Google Chrome</a>
@@ -11,6 +16,7 @@
                 <img class="icon" id="chrome-icon" src="../assets/chrome-icon.png">
             </a>
         </div>
+        <!-- Angular Link -->
         <div class="angular">
             <span id="learn-more" class="info-text smaller dark">Learn more about</span>
             <a class="info-text smaller link" href="{{ angularURL }}">Angular</a> 
