@@ -52,11 +52,15 @@
     grid-gap: 1rem;
 }
 .white-key {
+    font-family: Roboto, "Roboto", sans-serif;
     background-color: #fff;
     height: 8rem;
     text-align: center;
     border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: -5px 5px 5px rgba(0,0,0,0.10), -5px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.10), -5px 5px 5px rgba(0,0,0,0.1);
 }
+
 .justify-right {
     justify-content: flex-end;
 }
@@ -71,10 +75,14 @@
     left: 11.75rem;
 }
 .black-key {
+    font-family: Roboto, "Roboto", sans-serif;
     background-color: #000;
+    color: #efefef;
     height: 6rem;
     text-align: center;
     border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: -5px 5px 5px rgba(0,0,0,0.10), -5px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.10), -5px 5px 5px rgba(0,0,0,0.1);
 }
 .key-area {
     margin-top: 2rem;
