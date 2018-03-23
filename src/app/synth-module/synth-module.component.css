@@ -1,0 +1,94 @@
+.my-btn {
+    background: #ed0c39;
+    background-image: -webkit-linear-gradient(top, #ed0c39, #ff0000);
+    background-image: -moz-linear-gradient(top, #ed0c39, #ff0000);
+    background-image: -ms-linear-gradient(top, #ed0c39, #ff0000);
+    background-image: -o-linear-gradient(top, #ed0c39, #ff0000);
+    background-image: linear-gradient(to bottom, #ed0c39, #ff0000);
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Roboto, "Roboto", sans-serif;
+    color: #ffffff;
+    font-size: .75em;
+    padding: 10px 15px 10px 15px;
+    border: solid darkred 1px;
+    text-decoration: none;
+}
+.my-btn.active {
+    background-image: linear-gradient(to bottom, #821a2e, #d81d1d);
+}
+
+.synth-body {
+    background-color: #e03e3e;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.10), -20px 20px 10px rgba(0,0,0,0.1);
+    width: 50%;
+}
+
+.waveform-img {
+    max-width: 17rem;
+    background-color: #28b4bb;
+    padding: 10px;
+    border-radius: 9px;
+    margin-bottom: 1rem;
+    border: 5px solid darkred;
+    height: 5rem;
+}
+
+#keyboard-interface {
+    opacity: 0;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.white-keys {
+    display: grid;
+    grid-template-columns: repeat(8, 4.5rem);
+    grid-gap: 1rem;
+}
+.white-key {
+    background-color: #fff;
+    height: 8rem;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+.justify-right {
+    justify-content: flex-end;
+}
+.justify-center {
+    justify-content: center;
+}
+.black-keys {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(7, 3rem);
+    grid-gap: 2.5rem;
+    left: 11.75rem;
+}
+.black-key {
+    background-color: #000;
+    height: 6rem;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+.key-area {
+    margin-top: 2rem;
+}
+
+p {
+    color: #fff;
+    font-family: Roboto, "Roboto", sans-serif;
+    margin: 0;
+}
+
+.pt-1 {
+    padding-top: 1rem;
+}
+.pb-1 {
+    padding-bottom: 1rem;
+}

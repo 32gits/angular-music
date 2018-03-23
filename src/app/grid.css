@@ -1,0 +1,110 @@
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+
+
+/*
+The following rule will only run if your browser supports CSS grid.
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+*/
+
+.gallery-item {
+    /* Minimum width of 24rem and grow to fit available space */
+    flex: 1 0 24rem;
+    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+    margin: 1rem;
+    overflow: inherit;
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    @supports (display: grid) {
+        .gallery {
+            display: grid;
+            grid-template-rows: 40% 40%;
+            grid-gap: 2rem;
+        }
+        .gallery,
+        .gallery-item {
+            margin: 0;
+        }
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    @supports (display: grid) {
+        .gallery {
+            display: grid;
+            grid-template-rows: 40% 40%;
+            grid-gap: 2rem;
+        }
+        .gallery,
+        .gallery-item {
+            margin: 0;
+        }
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    @supports (display: grid) {
+        .gallery {
+            display: grid;
+            grid-template-rows: 40% 40%;
+            grid-gap: 2rem;
+        }
+        .gallery,
+        .gallery-item {
+            margin: 0;
+        }
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+    @supports (display: grid) {
+        .gallery {
+            display: grid;
+            grid-template-rows: 40% 40%;
+            grid-gap: 2rem;
+        }
+        .gallery,
+        .gallery-item {
+            margin: 0;
+        }
+    }
+    
+}
