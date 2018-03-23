@@ -25,27 +25,7 @@
             </div>
         </div>
     </div>
-    <div class="flex-row justify-center key-area">
-        <div class="white-keys">
-            <div class="white-key">A</div>
-            <div class="white-key">S</div>
-            <div class="white-key">D</div>
-            <div class="white-key">F</div>
-            <div class="white-key">J</div>
-            <div class="white-key">K</div>
-            <div class="white-key">L</div>
-            <div class="white-key">;</div>
-        </div>
-        <div class="black-keys">
-            <div class="black-key">W</div>
-            <div class="black-key">E</div>
-            <div></div>
-            <div class="black-key">U</div>
-            <div class="black-key">I</div>
-            <div class="black-key">O</div>
-            <div></div>
-        </div>
-    </div>
+    <img [src]="SVG + 'keyboard.svg'">
 </div>
 
 <input type="text" id="keyboard-interface" (keydown)="playNote($event)" (keyup)="stopSound()" (focusout)="togglePower(powerSwitch, kbInterface)" #kbInterface>
