@@ -15,6 +15,7 @@ export class DrumModuleComponent implements OnInit {
     buttons3: boolean[];
     buttons4: boolean[];
 
+
     playing: boolean;
 
     currentButton:  number;

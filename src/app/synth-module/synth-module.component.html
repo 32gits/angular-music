@@ -1,0 +1,51 @@
+
+
+<div class="synth-body">
+    <div class="switch">
+        <input type="checkbox" name="toggle" [checked]="isPowered" (click)="togglePower(powerSwitch, kbInterface)" #powerSwitch>
+        <label for="toggle"><i></i></label>
+        <span></span>
+    </div>
+    <div class="flex-row">
+        <img class="waveform-img" [src]="currentWaveImg">
+        <div>
+            <p>WAVE TYPE</p>
+            <div class="pb-1 pt-1">
+                <a data-target="#" class="my-btn" (click)="useSine()" [class.active]="osc.type === 'sine'">SINE</a>
+                <a data-target="#" class="my-btn" (click)="useSquare()" [class.active]="osc.type === 'square'">SQUARE</a>
+                <a data-target="#" class="my-btn" (click)="useSaw()" [class.active]="osc.type === 'sawtooth'">SAW</a>
+                <a data-target="#" class="my-btn" (click)="useTriangle()" [class.active]="osc.type === 'triangle'">TRIANGLE</a>
+            </div>
+            <div class="octave-wrapper">
+                <p>OCTAVE</p>
+                <div class="pt-1 pb-1">
+                        <a data-target="#" *ngFor="let octave of octaves" (click)="setOctave(octave)" class="my-btn" [class.active]="currentOctave === octave">{{ octave }}</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-row justify-center key-area">
+        <div class="white-keys">
+            <div class="white-key">A</div>
+            <div class="white-key">S</div>
+            <div class="white-key">D</div>
+            <div class="white-key">F</div>
+            <div class="white-key">J</div>
+            <div class="white-key">K</div>
+            <div class="white-key">L</div>
+            <div class="white-key">;</div>
+        </div>
+        <div class="black-keys">
+            <div class="black-key">W</div>
+            <div class="black-key">E</div>
+            <div></div>
+            <div class="black-key">U</div>
+            <div class="black-key">I</div>
+            <div class="black-key">O</div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<input type="text" id="keyboard-interface" (keydown)="playNote($event)" (keyup)="stopSound()" (focusout)="togglePower(powerSwitch, kbInterface)" #kbInterface>
