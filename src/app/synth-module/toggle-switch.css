@@ -17,9 +17,7 @@
   .switch {
     width: 7rem;
     height: 2rem;
-    position: absolute;
-    top: 17px;
-    right: 30px;
+    float: left;
   }
   
   .switch label {
@@ -52,12 +50,10 @@
     transition: all .5s ease;
   }
   
-  .switch label + span {
+  .indicator-light {
+    margin-left: 1rem;
     content: "";
     display: inline-block;
-    position: absolute;
-    right: -10px;
-    top: -33px;
     width: 18px;
     height: 18px;
     border-radius: 10px;
@@ -71,10 +67,9 @@
   
   /* Toggle */
   
-  .switch input:checked ~ label + span {
+  .indicator-light.active {
     content: "";
     display: inline-block;
-    position: absolute;
     width: 18px;
     height: 18px;
     border-radius: 10px;

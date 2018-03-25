@@ -220,9 +220,11 @@ export class SynthModuleComponent implements OnInit {
 
     togglePower(powerSwitch, kbInterface) {
         if (powerSwitch.checked) {
+            this.isPowered = true;
             kbInterface.focus();
         } else {
             kbInterface.blur();
+            this.isPowered = false;
         }
     }
 

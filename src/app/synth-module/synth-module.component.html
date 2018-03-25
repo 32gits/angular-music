@@ -1,18 +1,19 @@
 <div class="synth-body">
   
   <div class="row">
-    <div class="col-6">
-      <h2 class="in-block">Synthesizer</h2>
+    <div class="col-8">
+      <h2 class="in-block v-align">Synthesizer</h2>
+      <span class="indicator-light v-align" [class.active]="isPowered"></span>
     </div>
-    <div class="col-6">
+    <div class="col-4 mt-1">
+        <i id="keyboard-icon" class="fas fa-keyboard white-text"></i>
         <div class="switch">
             <input type="checkbox" name="toggle" [checked]="isPowered" (click)="togglePower(powerSwitch, kbInterface)" #powerSwitch>
             <label for="toggle">
                 <i></i>
             </label>
-            <span></span>
         </div>
-        <i id="keyboard-icon" class="fas fa-keyboard white-text"></i>
+        
     </div>
   </div>
 

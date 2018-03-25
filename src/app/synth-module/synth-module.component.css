@@ -22,7 +22,7 @@
 .synth-body {
     background-color: #e03e3e;
     border-radius: 25px;
-    padding: 40px;
+    padding: 20px 40px 40px 40px;
     box-shadow: -20px 20px 10px rgba(0,0,0,0.10), -20px 20px 10px rgba(0,0,0,0.1);
 }
 
@@ -105,14 +105,19 @@ p {
     padding-bottom: 1rem;
 }
 
+.mt-1 {
+    margin-top: 1rem !important;
+}
+
+.v-align {
+    vertical-align: middle;
+}
+
 .white-text {
     color: #fff;
 }
 #keyboard-icon {
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    font-size: 1.5em;
+    font-size: 2rem;
 }
 
 #keyboard-svg {
@@ -141,5 +146,21 @@ h2 {
 @media only screen and (max-width: 600px) {
     .synth-body {
         margin-top: 2rem;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 750px) {
+    #keyboard-icon {
+        float: right !important;
+    }
+    .switch {
+        float: right !important;
+    }
+}
+
+/* 720 px and down */
+@media only screen and (max-width: 720px) {
+    #waveform-img {
+        max-width: 100% !important;
     }
 }
