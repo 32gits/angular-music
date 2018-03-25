@@ -37,6 +37,8 @@
 
 #keyboard-interface {
     opacity: 0;
+    position: fixed;
+    top: 50%;
 }
 
 .flex-between {
