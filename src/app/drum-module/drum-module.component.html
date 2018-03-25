@@ -7,53 +7,60 @@
             <button id="stop" *ngIf="playing" class="btn-ctrl" type="button" (click)="stopSequence()">STOP</button>
         </div>
     </div>
-    <div class="flex-between secondary-ctrls">
-        <div class="bpm-controls">
-            <span id="bpm-text">{{ beatsPerMinute }}</span>
-            <div class="flex-col">
-                <a id="bpm-up" type="button" class="bpm-btn unselectable" (click)="bpmBump(1)">+</a>
-                <a id="bpm-down" type="button" class="bpm-btn unselectable" (click)="bpmBump(-1)">-</a>
+   
+    
+    <div class="row secondary-ctrls">
+        
+        <div class="col-6">
+            <div class="bpm-controls">
+                <span id="bpm-text">{{ beatsPerMinute }}</span>
+                <div class="flex-col">
+                    <a id="bpm-up" type="button" class="bpm-btn unselectable" (click)="bpmBump(1)">+</a>
+                    <a id="bpm-down" type="button" class="bpm-btn unselectable" (click)="bpmBump(-1)">-</a>
+                </div>
             </div>
         </div>
-        
+
         <!-- KICK SNARE TOM HAT -->
-        <div class="section-buttons">
-            <a 
-                id="section1"
-                role="button"
-                type="button"
-                class="section-btn"
-                (click)="changeSection(1)"
-                [class.sec-active]="currentSection===1">
-                KICK
-             </a>
-            <a
-                id="section2"
-                role="button"
-                type="button"
-                class="section-btn"
-                (click)="changeSection(2)"
-                [class.sec-active]="currentSection===2">
-                SNARE
-            </a>
-            <a
-                id="section3"
-                role="button"
-                type="button"
-                class="section-btn"
-                (click)="changeSection(3)"
-                [class.sec-active]="currentSection===3">
-                TOM
-            </a>
-            <a
-                id="section4"
-                role="button"
-                type="button"
-                class="section-btn"
-                (click)="changeSection(4)"
-                [class.sec-active]="currentSection===4">
-                HAT
-            </a>
+        <div class="col-6">
+            <div class="section-buttons">
+                <a 
+                    id="section1"
+                    role="button"
+                    type="button"
+                    class="section-btn"
+                    (click)="changeSection(1)"
+                    [class.sec-active]="currentSection===1">
+                    KICK
+                </a>
+                <a
+                    id="section2"
+                    role="button"
+                    type="button"
+                    class="section-btn"
+                    (click)="changeSection(2)"
+                    [class.sec-active]="currentSection===2">
+                    SNARE
+                </a>
+                <a
+                    id="section3"
+                    role="button"
+                    type="button"
+                    class="section-btn"
+                    (click)="changeSection(3)"
+                    [class.sec-active]="currentSection===3">
+                    TOM
+                </a>
+                <a
+                    id="section4"
+                    role="button"
+                    type="button"
+                    class="section-btn"
+                    (click)="changeSection(4)"
+                    [class.sec-active]="currentSection===4">
+                    HAT
+                </a>
+            </div>
         </div>
     </div>
     <!-- Buttons -->

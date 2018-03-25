@@ -4,7 +4,7 @@ import { DrumButtonComponent } from './drum-button/drum-button.component';
 @Component({
     selector: 'app-drum-module',
     templateUrl: './drum-module.component.html',
-    styleUrls: ['./drum-module.component.css']
+    styleUrls: ['./drum-module.component.css', '../simple-grid-ONLYGRID.css']
 })
 export class DrumModuleComponent implements OnInit {
 

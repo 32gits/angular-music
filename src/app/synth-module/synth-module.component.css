@@ -137,3 +137,9 @@ h2 {
 #octave-buttons a {
     flex-grow: 1;
 }
+
+@media only screen and (max-width: 600px) {
+    .synth-body {
+        margin-top: 2rem;
+    }
+}
