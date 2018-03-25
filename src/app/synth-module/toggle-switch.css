@@ -17,8 +17,9 @@
   .switch {
     width: 7rem;
     height: 2rem;
-    position: relative;
-    float: right;
+    position: absolute;
+    top: 17px;
+    right: 30px;
   }
   
   .switch label {
@@ -56,7 +57,7 @@
     display: inline-block;
     position: absolute;
     right: -10px;
-    top: 5px;
+    top: -33px;
     width: 18px;
     height: 18px;
     border-radius: 10px;

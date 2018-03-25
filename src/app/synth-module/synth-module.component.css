@@ -24,26 +24,28 @@
     border-radius: 25px;
     padding: 40px;
     box-shadow: -20px 20px 10px rgba(0,0,0,0.10), -20px 20px 10px rgba(0,0,0,0.1);
-    width: 50%;
 }
 
 .waveform-img {
-    max-width: 17rem;
+    max-width: 79%;
     background-color: #28b4bb;
     padding: 10px;
     border-radius: 9px;
-    margin-bottom: 1rem;
+    margin: .7rem 0 .5rem 0;
     border: 5px solid darkred;
-    height: 5rem;
 }
 
 #keyboard-interface {
     opacity: 0;
 }
 
-.flex-row {
+.flex-between {
     display: flex;
     justify-content: space-between;
+}
+
+.flex {
+    display: flex;
 }
 
 .white-keys {
@@ -99,4 +101,37 @@ p {
 }
 .pb-1 {
     padding-bottom: 1rem;
+}
+
+.white-text {
+    color: #fff;
+}
+#keyboard-icon {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 1.5em;
+}
+
+#keyboard-svg {
+    width: 103%;
+    margin-left: -1%;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 2.5em;
+    color: #ffefef;
+    margin: 0;
+}
+.in-block {
+    display: inline-block;
+}
+#octave-buttons {
+    height: 2rem;
+    margin: .7rem 0 .5rem 0;
+}
+#octave-buttons a {
+    flex-grow: 1;
 }

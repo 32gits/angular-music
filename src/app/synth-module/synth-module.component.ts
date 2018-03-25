@@ -4,7 +4,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 @Component({
     selector: 'app-synth-module',
     templateUrl: './synth-module.component.html',
-    styleUrls: ['./synth-module.component.css', './toggle-switch.css']
+    styleUrls: ['./synth-module.component.css', './toggle-switch.css', '../simple-grid-ONLYGRID.css']
 })
 export class SynthModuleComponent implements OnInit {
 
@@ -20,7 +20,7 @@ export class SynthModuleComponent implements OnInit {
     attackTime: number;
     releaseTime: number;
 
-    octaves = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    octaves = [0, 1, 2, 3, 4, 5, 6];
     notes = ['a', 'bFlat', 'b', 'c', 'cSharp', 'd', 'eFlat', 'e', 'f', 'fSharp', 'g', 'gSharp'];
 
     currentOctave: number;
@@ -30,6 +30,9 @@ export class SynthModuleComponent implements OnInit {
     isPowered: boolean;
 
     SVG = '../../assets/svg/';
+
+    octaveSVGActive = this.SVG + 'keys_octave_active.svg';
+    octaveSVG = this.SVG + 'keys_octave.svg';
 
     currentWaveImg: string;
 

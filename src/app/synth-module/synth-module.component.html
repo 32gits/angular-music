@@ -1,31 +1,46 @@
-
-
 <div class="synth-body">
-    <div class="switch">
-        <input type="checkbox" name="toggle" [checked]="isPowered" (click)="togglePower(powerSwitch, kbInterface)" #powerSwitch>
-        <label for="toggle"><i></i></label>
-        <span></span>
+  
+  <div class="row">
+    <div class="col-6">
+      <h2 class="in-block">Synthesizer</h2>
     </div>
-    <div class="flex-row">
-        <img class="waveform-img" [src]="currentWaveImg">
-        <div>
-            <p>WAVE TYPE</p>
-            <div class="pb-1 pt-1">
-                <a data-target="#" class="my-btn" (click)="useSine()" [class.active]="osc.type === 'sine'">SINE</a>
-                <a data-target="#" class="my-btn" (click)="useSquare()" [class.active]="osc.type === 'square'">SQUARE</a>
-                <a data-target="#" class="my-btn" (click)="useSaw()" [class.active]="osc.type === 'sawtooth'">SAW</a>
-                <a data-target="#" class="my-btn" (click)="useTriangle()" [class.active]="osc.type === 'triangle'">TRIANGLE</a>
-            </div>
-            <div class="octave-wrapper">
-                <p>OCTAVE</p>
-                <div class="pt-1 pb-1">
-                        <a data-target="#" *ngFor="let octave of octaves" (click)="setOctave(octave)" class="my-btn" [class.active]="currentOctave === octave">{{ octave }}</a>
+    <div class="col-6">
+        <div class="switch">
+            <input type="checkbox" name="toggle" [checked]="isPowered" (click)="togglePower(powerSwitch, kbInterface)" #powerSwitch>
+            <label for="toggle">
+                <i></i>
+            </label>
+            <span></span>
+        </div>
+        <i id="keyboard-icon" class="fas fa-keyboard white-text"></i>
+    </div>
+  </div>
 
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-5">
+        <p>WAVE TYPE</p>
+        <img class="waveform-img" [src]="currentWaveImg">
+        <div class="pb-1 pt-1">
+            <a data-target="#" class="my-btn" (click)="useSine()" [class.active]="osc.type === 'sine'">SINE</a>
+            <a data-target="#" class="my-btn" (click)="useSquare()" [class.active]="osc.type === 'square'">SQUARE</a>
+            <a data-target="#" class="my-btn" (click)="useSaw()" [class.active]="osc.type === 'sawtooth'">SAW</a>
+            <a data-target="#" class="my-btn" (click)="useTriangle()" [class.active]="osc.type === 'triangle'">TRIANGLE</a>
         </div>
     </div>
-    <img [src]="SVG + 'keyboard.svg'">
+
+    <div class="col-7">
+      <div class="octave-wrapper">
+        <p>OCTAVE</p>
+        <div class="flex" id="octave-buttons">
+          <a data-target="#" *ngFor="let octave of octaves" (click)="setOctave(octave)" [class.active]="currentOctave === octave">
+            <img src="{{ currentOctave === octave ? octaveSVGActive : octaveSVG }}">
+          </a>
+        </div>
+      </div>
+      <img id="keyboard-svg" [src]="SVG + 'keyboard.svg'">
+    </div>
+  </div>
 </div>
 
-<input type="text" id="keyboard-interface" (keydown)="playNote($event)" (keyup)="stopSound()" (focusout)="togglePower(powerSwitch, kbInterface)" #kbInterface>
+<input type="text" id="keyboard-interface" (keydown)="playNote($event)" (keyup)="stopSound()" (focusout)="togglePower(powerSwitch, kbInterface)"
+  #kbInterface>

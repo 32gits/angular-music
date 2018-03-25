@@ -169,9 +169,9 @@ a[role=button]:hover {
 @media only screen and (max-width: 600px) {
     .button-layout {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(16, 1fr);
-        grid-gap: 1rem;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(16, auto);
+        grid-gap: .5rem;
     }
 } 
 
@@ -179,9 +179,9 @@ a[role=button]:hover {
 @media only screen and (min-width: 600px) {
     .button-layout {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(16, 1fr);
-        grid-gap: 1rem;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(16, auto);
+        grid-gap: .5rem;
     }
 } 
 
@@ -189,9 +189,9 @@ a[role=button]:hover {
 @media only screen and (min-width: 768px) {
     .button-layout {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        grid-gap: 1rem;
+        grid-template-columns: repeat(8, auto);
+        grid-template-rows: repeat(8, auto);
+        grid-gap: .5rem;
     }
 } 
 
@@ -199,9 +199,9 @@ a[role=button]:hover {
 @media only screen and (min-width: 992px) {
     .button-layout {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        grid-gap: 1rem;
+        grid-template-columns: repeat(8, auto);
+        grid-template-rows: repeat(8, auto);
+        grid-gap: .5rem;
     }
 } 
 
@@ -209,8 +209,8 @@ a[role=button]:hover {
 @media only screen and (min-width: 1200px) {
     .button-layout {
         display: grid;
-        grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-gap: 1rem;
+        grid-template-columns: repeat(16, auto);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: .5rem;
     }
 }
