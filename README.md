@@ -1,5 +1,9 @@
 # Angular Music
 
+Angular Music is a web application for making music created with Angular. You can create a drum loop with the drum sequencer module and play sounds using the synthensizer module. You can play the synth notes using your keyboard.
+
+Try it out [here](https://ng-music.herokuapp.com/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
